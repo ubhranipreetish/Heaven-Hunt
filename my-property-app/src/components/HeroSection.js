@@ -1,5 +1,5 @@
 "use client";
-import "../styles/HeroSection.css"; // Import the CSS file
+import "../styles/HeroSection.css";
 
 export default function HeroSection() {
   return (

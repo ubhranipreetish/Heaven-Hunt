@@ -1,7 +1,7 @@
 .hero-section {
     position: relative;
     height: 90vh;
-    background-image: url('../hero_section_main.jpg');
+    background-image: url('/images/hero_section_main2.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -13,7 +13,7 @@
   .overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
   
@@ -21,15 +21,13 @@
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 0 1rem;
   }
-  
+
   .hero-content h1 {
+    font-size: 5rem;
+  }
+  .hero-content p {
     font-size: 3rem;
-    margin-bottom: 1rem;
   }
   
-  .hero-content p {
-    font-size: 1.5rem;
-  }
   
