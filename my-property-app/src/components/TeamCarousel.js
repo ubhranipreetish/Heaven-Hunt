@@ -3,34 +3,34 @@ import '../styles/TeamCarousel.css';
 
 const teamMembers = [
   {
-    name: 'Anjali Mehta',
+    name: 'Hem Batra',
     propertiesDelivered: 120,
     experience: 7,
-    image: '/team/anjali.jpg',
+    image: '/images/hem.jpeg',
   },
   {
-    name: 'Rohit Sharma',
+    name: 'Josh Flangg',
     propertiesDelivered: 95,
     experience: 5,
-    image: '/team/rohit.jpg',
+    image: '/images/josh.webp',
   },
   {
-    name: 'Neha Kapoor',
+    name: 'Karuna Gidwani',
     propertiesDelivered: 110,
     experience: 6,
-    image: '/team/neha.jpg',
+    image: '/images/karuna.jpg',
   },
   {
-    name: 'Amit Verma',
+    name: 'Navdeep Khanuja',
     propertiesDelivered: 130,
     experience: 8,
-    image: '/team/amit.jpg',
+    image: '/images/navdeep.jpeg',
   },
   {
-    name: 'Sara Ali',
+    name: 'Steve Altman',
     propertiesDelivered: 90,
     experience: 4,
-    image: '/team/sara.jpg',
+    image: '/images/steve.jpeg',
   },
 ];
 
@@ -51,7 +51,7 @@ const TeamCarousel = () => {
         <div className="carousel-container">
           {teamMembers.map((member, index) => (
             <div className="team-card" key={index}>
-              <img src='/images/employee.avif' alt={member.name} />
+              <img src={member.image} alt={member.name} />
               <h3>{member.name}</h3>
               <p><strong>Properties Delivered:</strong> {member.propertiesDelivered}</p>
               <p><strong>Experience:</strong> {member.experience} years</p>

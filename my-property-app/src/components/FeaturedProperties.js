@@ -6,25 +6,25 @@ const properties = [
     title: "Skyline Haven",
     price: "$2,50,000",
     location: "California",
-    image: "/images/hero_section_main2.jpg", 
+    image: "/images/house1.jpeg", 
   },
   {
     title: "Vista Verde",
     price: "$2,50,000",
     location: "San Francisco",
-    image: "/images/hero_section_main2.jpg",
+    image: "/images/house2.jpeg",
   },
   {
     title: "Serenity Suites",
     price: "$2,50,000",
     location: "Chicago",
-    image: "/images/hero_section_main2.jpg",
+    image: "/images/house3.jpeg",
   },
   {
     title: "Palm Retreat",
     price: "$3,10,000",
     location: "Florida",
-    image: "/images/hero_section_main2.jpg",
+    image: "/images/house4.jpeg",
   }
 ];
 

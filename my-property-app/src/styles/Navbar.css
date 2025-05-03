@@ -11,19 +11,18 @@
   z-index: 1000;
 }
 
-/* Logo on the left */
+
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #fbbf24; /* Golden color */
+  color: white; 
 }
 
-/* Spacer to push right side */
 .navbar-middle {
   flex: 1;
 }
 
-/* Nav items grouped on the right */
+
 .nav-items {
   display: flex;
   gap: 24px;
