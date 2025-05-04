@@ -19,6 +19,9 @@ export default function Navbar() {
         <Link href="/about" passHref>
           <span className="about">About</span>
         </Link>
+        <Link href="/contact" passHref>
+          <span className="about">Contact</span>
+        </Link>
       </div>
     </nav>
   );
