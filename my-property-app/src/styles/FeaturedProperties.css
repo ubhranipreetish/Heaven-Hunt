@@ -3,6 +3,10 @@
     text-align: center;
     background-color: #1e293b;
   }
+
+  h2 {
+    font-size: 2rem;
+  }
   
   .property-grid {
     display: flex;

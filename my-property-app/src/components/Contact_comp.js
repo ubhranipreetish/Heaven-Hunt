@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
-
-import "../styles/Contact_comp.css";
 import Footer from "./Footer";
+import "../styles/Contact_comp.css";
+
 
 const Contact_comp = () => {
   return (
@@ -10,6 +10,7 @@ const Contact_comp = () => {
       <Navbar />
 
       <section className="contact-section">
+        <h2>ThankYou for Visiting Us</h2>
         <h2>Contact Us</h2>
         <p className="contact-subtitle">We’d love to hear from you. Reach out to us!</p>
 

@@ -8,25 +8,31 @@ const About_Component = () => {
     <div>
       <Navbar />
 
-      <section className="our-story">
-        <h2>Our Story</h2>
-        <p>
-          Heaven Hunt was founded with the vision of making property discovery
-          seamless and transparent. We aim to connect buyers with dream homes and
-          provide hassle-free search experiences.
-        </p>
+      <div className="our-story">
+        <div className='story'>
+          <h2>Our Story</h2>
+          <p>
+            Heaven Hunt was founded with the vision of making property discovery
+            seamless and transparent. We aim to connect buyers with dream homes and
+            provide hassle-free search experiences.
+          </p>
+          <img src='/images/house6.jpeg' alt="About Heaven Hunt" />
+        </div>
 
-        <h3>Mission & Vision</h3>
-        <p>
-          Our mission is to revolutionize the real estate search with tech-driven
-          solutions. We envision a world where anyone can find their perfect place
-          with confidence and ease.
-        </p>
-      </section>
+        <div className='mission'>
+          <h2>Mission & Vision</h2>
+          <p>
+            Our mission is to revolutionize the real estate search with tech-driven
+            solutions. We envision a world where anyone can find their perfect place
+            with confidence and ease.
+          </p>
+          <img src='/images/house7.jpeg' alt="About Heaven Hunt" />
+        </div>
+      </div >
 
-      <section className="specialities-section">
+      <div className="specialities-section">
         <div className="image-container">
-          <img src='/images/hero_section_main2.jpg' alt="About Heaven Hunt" />
+          <img src='/images/house8.jpeg' alt="About Heaven Hunt" />
         </div>
         <div className="specialities">
           <h2>Our Specialities</h2>
@@ -38,7 +44,7 @@ const About_Component = () => {
             <li>Insights, Trends & Valuation Tools</li>
           </ul>
         </div>
-      </section>
+      </div >
 
     </div>
   );

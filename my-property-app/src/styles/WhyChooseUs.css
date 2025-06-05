@@ -1,18 +1,18 @@
 .why-choose-us {
   padding: 60px 20px;
-  background-color: #f9fafb;
+  background-color: #1e293b;
   text-align: center;
 }
 
 .why-choose-us h2 {
   font-size: 32px;
   margin-bottom: 10px;
-  color: #1e293b;
+  color: white;
 }
 
 .subtitle {
   font-size: 16px;
-  color: #64748b;
+  color: white;
   margin-bottom: 40px;
 }
 
