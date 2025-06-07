@@ -1,7 +1,7 @@
 .hero-section {
     position: relative;
     height: 90vh;
-    background-image: url('/images/hero_section_main2.jpg');
+    background-image: url('/images/hero_section_main.jpg');
     background-size: cover;
     background-position: center;
     display: flex;

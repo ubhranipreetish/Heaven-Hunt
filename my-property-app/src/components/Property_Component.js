@@ -277,8 +277,8 @@ function PropertyComponent(){
                     {
                         properties.map(elem => (
                             
-                    <div className='property-cards'>
-                        <div className='prop-image' key={elem.id}>
+                    <div className='property-cards' key={elem.id}>
+                        <div className='prop-image'>
                             <img src={elem.image} />
                         </div>
                         <div className='prop-details'>
@@ -294,9 +294,9 @@ function PropertyComponent(){
                             </div>
                             <div className='prop-highlights'>
                                 {
-                                    elem.amenities.map(highlight => (
+                                    elem.amenities.map((highlight , index) => (
 
-                                    <div className='prop-feat'>
+                                    <div className='prop-feat' key={index}>
                                         <h3>{highlight}</h3>
                                     </div>
                                     ))
