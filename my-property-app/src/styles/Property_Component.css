@@ -1,0 +1,101 @@
+.prop-page {
+    background-color: #1e293b;
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-navbar {
+    width: 25vw;
+    background-color: aquamarine;
+    margin: 2vw;
+    margin-right: 1vw;
+
+}
+
+.property-container {
+    width: 70vw;
+    background-color: #1e293b;
+    margin: 2vw;
+    margin-left: 1vw;
+    border: 2px solid aquamarine;
+    padding: 2vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.property-cards {
+    background-color: white;
+    color: black;
+    width: 20vw;
+    margin: 1vw;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .property-cards:hover {
+    transform: translateY(-5px);
+  }
+
+.prop-image img{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.prop-details {
+    padding: 1vw;
+}
+.prop-details h2 {
+    font-size: 1.5rem;
+}
+
+.prop-specs {
+    margin-top: 2vh;
+    display: flex;
+}
+
+.prop-price , .prop-area {
+    width: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.prop-area {
+    border-left: 2px solid black;
+}
+
+.prop-highlights {
+    margin-top: 2vh;
+    display: flex;
+    gap: 1vw;
+}
+
+.prop-feat {
+    width: 33%;
+    text-align: center;
+    background-color: #f4f5f7;
+}
+
+.prop-contact {
+    margin-top: 2vh;
+    display: flex;
+    gap: 1vw;
+}
+
+.prop-view {
+    margin-top: 2vh;
+}
+
+button {
+    width: 100%;
+    height: 5vh;
+    background-color: #0095ff;
+    color: white;
+}
+
+button:hover {
+    background-color: #0076d6;
+    cursor: pointer;
+}
+
+

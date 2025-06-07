@@ -13,7 +13,7 @@ export default function Navbar() {
         <Link href="/" passHref>
           <span className="home">Home</span>
         </Link>
-        <Link href="/" passHref>
+        <Link href="/properties" passHref>
           <span className="properties-navbar">Properties</span>
         </Link>
         <Link href="/about" passHref>
