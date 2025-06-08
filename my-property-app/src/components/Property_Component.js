@@ -1,4 +1,6 @@
 import '../styles/Property_Component.css';
+import Image from 'next/image'
+
 
 const properties = [
     {
@@ -11,7 +13,7 @@ const properties = [
       bathrooms: 2,
       area: 950,
       amenities: ["Parking", "Balcony", "Elevator"],
-      image: "./images/flat8.jpeg",
+      image: "/images/flat8.jpeg",
       contact: "99999 12345"
     },
     {
@@ -24,7 +26,7 @@ const properties = [
       bathrooms: 3,
       area: 1450,
       amenities: ["Garden", "Pool", "Balcony"],
-      image: "./images/villa1.jpeg",
+      image: "/images/villa1.jpeg",
       contact: "99999 23456"
     },
     {
@@ -37,7 +39,7 @@ const properties = [
       bathrooms: 2,
       area: 880,
       amenities: ["Parking", "Elevator", "Garden"],
-      image: "./images/flat2.jpeg",
+      image: "/images/flat2.jpeg",
       contact: "99999 34567"
     },
     {
@@ -50,7 +52,7 @@ const properties = [
       bathrooms: 3,
       area: 1320,
       amenities: ["Pool", "Balcony", "Parking"],
-      image: "./images/villa2.jpeg",
+      image: "/images/villa2.jpeg",
       contact: "99999 45678"
     },
     {
@@ -63,7 +65,7 @@ const properties = [
       bathrooms: 2,
       area: 900,
       amenities: ["Elevator", "Garden", "Balcony"],
-      image: "./images/villa7.jpeg",
+      image: "/images/villa7.jpeg",
       contact: "99999 56789"
     },
     {
@@ -76,7 +78,7 @@ const properties = [
       bathrooms: 2,
       area: 1000,
       amenities: ["Pool", "Parking", "Elevator"],
-      image: "./images/flat3.jpeg",
+      image: "/images/flat3.jpeg",
       contact: "99999 67890"
     },
     {
@@ -89,7 +91,7 @@ const properties = [
       bathrooms: 2,
       area: 950,
       amenities: ["Balcony", "Elevator", "Garden"],
-      image: "./images/flat10.jpeg",
+      image: "/images/flat10.jpeg",
       contact: "99999 78901"
     },
     {
@@ -102,7 +104,7 @@ const properties = [
       bathrooms: 3,
       area: 1500,
       amenities: ["Pool", "Garden", "Balcony"],
-      image: "./images/villa3.jpeg",
+      image: "/images/villa3.jpeg",
       contact: "99999 89012"
     },
     {
@@ -115,7 +117,7 @@ const properties = [
       bathrooms: 1,
       area: 850,
       amenities: ["Parking", "Elevator", "Pool"],
-      image: "./images/villa8.jpeg",
+      image: "/images/villa8.jpeg",
       contact: "99999 90123"
     },
     {
@@ -128,7 +130,7 @@ const properties = [
       bathrooms: 2,
       area: 910,
       amenities: ["Balcony", "Parking", "Garden"],
-      image: "./images/flat5.jpeg",
+      image: "/images/flat5.jpeg",
       contact: "99999 01234"
     },
     {
@@ -141,7 +143,7 @@ const properties = [
       bathrooms: 3,
       area: 1400,
       amenities: ["Garden", "Elevator", "Pool"],
-      image: "./images/villa4.jpeg",
+      image: "/images/villa4.jpeg",
       contact: "88888 11111"
     },
     {
@@ -154,7 +156,7 @@ const properties = [
       bathrooms: 2,
       area: 920,
       amenities: ["Balcony", "Parking", "Elevator"],
-      image: "./images/flat9.jpeg",
+      image: "/images/flat9.jpeg",
       contact: "88888 22222"
     },
     {
@@ -167,7 +169,7 @@ const properties = [
       bathrooms: 1,
       area: 820,
       amenities: ["Garden", "Pool", "Parking"],
-      image: "./images/villa9.jpeg",
+      image: "/images/villa9.jpeg",
       contact: "88888 33333"
     },
     {
@@ -180,7 +182,7 @@ const properties = [
       bathrooms: 4,
       area: 1600,
       amenities: ["Elevator", "Balcony", "Parking"],
-      image: "./images/villa5.jpeg",
+      image: "/images/villa5.jpeg",
       contact: "88888 44444"
     },
     {
@@ -193,7 +195,7 @@ const properties = [
       bathrooms: 2,
       area: 980,
       amenities: ["Garden", "Parking", "Balcony"],
-      image: "./images/flat7.jpeg",
+      image: "/images/flat7.jpeg",
       contact: "88888 55555"
     },
     {
@@ -206,7 +208,7 @@ const properties = [
       bathrooms: 2,
       area: 860,
       amenities: ["Elevator", "Pool", "Parking"],
-      image: "./images/villa10.jpeg",
+      image: "/images/villa10.jpeg",
       contact: "88888 66666"
     },
     {
@@ -219,7 +221,7 @@ const properties = [
       bathrooms: 2,
       area: 1020,
       amenities: ["Balcony", "Garden", "Elevator"],
-      image: "./images/flat1.jpeg",
+      image: "/images/flat1.jpeg",
       contact: "88888 77777"
     },
     {
@@ -232,7 +234,7 @@ const properties = [
       bathrooms: 4,
       area: 1550,
       amenities: ["Pool", "Garden", "Parking"],
-      image: "./images/villa6.jpeg",
+      image: "/images/villa6.jpeg",
       contact: "88888 88888"
     },
     {
@@ -245,7 +247,7 @@ const properties = [
       bathrooms: 2,
       area: 880,
       amenities: ["Balcony", "Elevator", "Parking"],
-      image: "./images/flat6.jpeg",
+      image: "/images/flat6.jpeg",
       contact: "88888 99999"
     },
     {
@@ -258,7 +260,7 @@ const properties = [
       bathrooms: 3,
       area: 1180,
       amenities: ["Garden", "Pool", "Elevator"],
-      image: "./images/flat4.jpeg",
+      image: "/images/flat4.jpeg",
       contact: "77777 00000"
     }
   ];
@@ -279,7 +281,7 @@ function PropertyComponent(){
                             
                     <div className='property-cards' key={elem.id}>
                         <div className='prop-image'>
-                            <img src={elem.image} />
+                            <Image src={elem.image} alt={elem.title} fill style={{ objectFit: "cover" }}/>
                         </div>
                         <div className='prop-details'>
                             <h2>{elem.title}</h2>

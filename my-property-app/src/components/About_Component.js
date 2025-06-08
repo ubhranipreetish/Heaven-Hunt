@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
+import Image from 'next/image'
+
 import '../styles/About_Component.css';
 
 
@@ -16,7 +18,9 @@ const About_Component = () => {
             seamless and transparent. We aim to connect buyers with dream homes and
             provide hassle-free search experiences.
           </p>
-          <img src='/images/house6.jpeg' alt="About Heaven Hunt" />
+          <div className='image'>
+            <Image src='/images/house6.jpeg' alt="About Heaven Hunt"  fill style={{ objectFit: "cover" }}/>
+          </div>
         </div>
 
         <div className='mission'>
@@ -26,13 +30,15 @@ const About_Component = () => {
             solutions. We envision a world where anyone can find their perfect place
             with confidence and ease.
           </p>
-          <img src='/images/house7.jpeg' alt="About Heaven Hunt" />
+          <div className='image'>
+            <Image src='/images/house7.jpeg' alt="About Heaven Hunt"  fill style={{ objectFit: "cover" }}/>
+          </div>
         </div>
       </div >
 
       <div className="specialities-section">
         <div className="image-container">
-          <img src='/images/house8.jpeg' alt="About Heaven Hunt" />
+          <Image src='/images/house8.jpeg' alt="About Heaven Hunt" fill style={{ objectFit: "cover" }}/>
         </div>
         <div className="specialities">
           <h2>Our Specialities</h2>

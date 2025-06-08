@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/TeamCarousel.css';
+import Image from 'next/image'
+
 
 const teamMembers = [
   {
@@ -63,7 +65,9 @@ const TeamCarousel = () => {
         <div className="carousel-container">
           {[...teamMembers, ...teamMembers].map((member, index) => (
             <div className="team-card" key={index}>
-              <img src={member.image} alt={member.name} />
+              <div className='team-card-img'>
+                <Image src={member.image} alt={member.name} fill style={{ objectFit: "cover" }}/>
+              </div>
               <h3>{member.name}</h3>
               <p><strong>Properties Delivered:</strong> {member.propertiesDelivered}</p>
               <p><strong>Experience:</strong> {member.experience} years</p>

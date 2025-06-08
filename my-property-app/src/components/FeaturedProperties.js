@@ -1,5 +1,7 @@
 "use client";
 import "../styles/FeaturedProperties.css";
+import Image from 'next/image'
+
 
 const properties = [
   {
@@ -35,7 +37,9 @@ export default function FeaturedProperties() {
       <div className="property-grid">
         {properties.map((property, index) => (
           <div className="property-card" key={index}>
-            <img src={property.image} alt={property.title} />
+            <div className="feat-image">
+              <Image src={property.image} alt={property.title} fill style={{ objectFit: "cover" }}/>
+            </div>
             <div className="property-info">
               <h3>{property.title}</h3>
               <p>
