@@ -52,3 +52,20 @@
     color: #555;
   }
   
+.view-more {
+    margin-top: 4vh;
+}
+
+.view-more button {
+    width: 25%;
+    height: 6vh;
+    background-color: #0095ff;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.25rem;
+}
+
+.view-more button:hover {
+    background-color: #0076d6;
+    cursor: pointer;
+}

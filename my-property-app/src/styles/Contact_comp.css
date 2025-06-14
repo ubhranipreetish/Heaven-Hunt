@@ -45,7 +45,7 @@
   
   .contact-form button {
     padding: 12px;
-    background-color: rgb(44, 115, 223);
+    background-color: #0095ff;
     color: white;
     font-weight: bold;
     border: none;
@@ -55,7 +55,7 @@
   }
   
   .contact-form button:hover {
-    background-color: #0f172a;
+    background-color: #0076d6;
   }
   
   .contact-map {

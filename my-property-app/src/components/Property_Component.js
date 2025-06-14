@@ -1,5 +1,9 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
 import '../styles/Property_Component.css';
 import Image from 'next/image'
+import Sidebar from "./Sidebar";
 
 
 const properties = [
@@ -264,20 +268,48 @@ const properties = [
       contact: "77777 00000"
     }
   ];
+
+
   
 
   
 function PropertyComponent(){
+    const [sortOption, setSortOption] = useState("");
+    const [sortedProperties, setSortedProperties] = useState(properties);
+
+    useEffect(() => {
+        let sorted = [...properties];
+        switch (sortOption) {
+            case "price-asc":
+                sorted.sort((a, b) => a.price - b.price);
+                break;
+            case "price-desc":
+                sorted.sort((a, b) => b.price - a.price);
+                break;
+            case "area-asc":
+                sorted.sort((a, b) => a.area - b.area);
+                break;
+            case "area-desc":
+                sorted.sort((a, b) => b.area - a.area);
+                break;
+
+            default:
+                break;
+        }
+        setSortedProperties(sorted);
+    }, [sortOption, properties]);
+
+
     return (
         <>
             <div className="prop-page">
                 <div className="left-navbar">
-                    <h1>Hello</h1>
+                    <Sidebar sortOption={sortOption} setSortOption={setSortOption} />
                 </div>
 
                 <div className="property-container">
                     {
-                        properties.map(elem => (
+                        sortedProperties.map(elem => (
                             
                     <div className='property-cards' key={elem.id}>
                         <div className='prop-image'>

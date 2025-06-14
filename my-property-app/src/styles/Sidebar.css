@@ -1,0 +1,53 @@
+
+.sort-section {
+    margin-top: 1.5vw;
+    padding: 1vw;
+}
+
+.sort-section label {
+    display: inline;
+}
+  
+.sort-section select {
+    font-size: 14px;
+    display: inline;
+    padding: 8px;
+}
+
+.filter-section {
+    padding: 1vw;
+}
+
+.filter-section h1 {
+    font-size: 2rem;
+}
+
+.filter-tags h4 {
+    font-size: 1.5rem;
+}
+
+.filter-tags ul {
+    padding-left: 2vw;
+}
+
+.filter-tags label {
+    margin-left: 0.5vw;
+}
+
+.price-values {
+    margin-top: 1vh;
+    font-size: 1rem;
+}
+  
+.filter-action button {
+    width: 40%;
+    height: 4vh;
+    margin: 1vw;
+    background-color: white;
+    color: black;
+}
+
+.filter-action button:hover {
+    background-color: #f59e0b;
+    cursor: pointer;
+}

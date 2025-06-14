@@ -5,7 +5,9 @@ import "../styles/Navbar.css";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <span className="logo">Heaven Hunt</span>
+      <Link href="/" passHref>
+        <span className="logo">Heaven Hunt</span>
+      </Link>
 
       <div className="navbar-middle"></div>
 
