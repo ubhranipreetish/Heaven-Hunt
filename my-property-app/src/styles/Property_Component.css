@@ -33,9 +33,9 @@
     border-radius: 8px;
   }
   
-  .property-cards:hover {
+.property-cards:hover {
     transform: translateY(-5px);
-  }
+}
 
 .prop-image{
     position: relative;
@@ -43,6 +43,7 @@
     height: 30vh;
     object-fit: cover;
 }
+
 
 .prop-details {
     padding: 1vw;

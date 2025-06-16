@@ -18,7 +18,8 @@ const properties = [
       area: 950,
       amenities: ["Parking", "Balcony", "Elevator"],
       image: "/images/flat8.jpeg",
-      contact: "99999 12345"
+      contact: "99999 12345",
+      wishlist: false
     },
     {
       id: 2,
@@ -31,7 +32,8 @@ const properties = [
       area: 1450,
       amenities: ["Garden", "Pool", "Balcony"],
       image: "/images/villa1.jpeg",
-      contact: "99999 23456"
+      contact: "99999 23456",
+      wishlist: false
     },
     {
       id: 3,
@@ -43,8 +45,9 @@ const properties = [
       bathrooms: 2,
       area: 880,
       amenities: ["Parking", "Elevator", "Garden"],
-      image: "/images/flat2.jpeg",
-      contact: "99999 34567"
+      image: "/images/flat4.jpeg",
+      contact: "99999 34567",
+      wishlist: false
     },
     {
       id: 4,
@@ -56,8 +59,9 @@ const properties = [
       bathrooms: 3,
       area: 1320,
       amenities: ["Pool", "Balcony", "Parking"],
-      image: "/images/villa2.jpeg",
-      contact: "99999 45678"
+      image: "/images/villa6.jpeg",
+      contact: "99999 45678",
+      wishlist: false
     },
     {
       id: 5,
@@ -70,7 +74,8 @@ const properties = [
       area: 900,
       amenities: ["Elevator", "Garden", "Balcony"],
       image: "/images/villa7.jpeg",
-      contact: "99999 56789"
+      contact: "99999 56789",
+      wishlist: false
     },
     {
       id: 6,
@@ -82,8 +87,9 @@ const properties = [
       bathrooms: 2,
       area: 1000,
       amenities: ["Pool", "Parking", "Elevator"],
-      image: "/images/flat3.jpeg",
-      contact: "99999 67890"
+      image: "/images/flat2.jpeg",
+      contact: "99999 67890",
+      wishlist: false
     },
     {
       id: 7,
@@ -96,7 +102,8 @@ const properties = [
       area: 950,
       amenities: ["Balcony", "Elevator", "Garden"],
       image: "/images/flat10.jpeg",
-      contact: "99999 78901"
+      contact: "99999 78901",
+      wishlist: false
     },
     {
       id: 8,
@@ -109,7 +116,8 @@ const properties = [
       area: 1500,
       amenities: ["Pool", "Garden", "Balcony"],
       image: "/images/villa3.jpeg",
-      contact: "99999 89012"
+      contact: "99999 89012",
+      wishlist: false
     },
     {
       id: 9,
@@ -122,7 +130,8 @@ const properties = [
       area: 850,
       amenities: ["Parking", "Elevator", "Pool"],
       image: "/images/villa8.jpeg",
-      contact: "99999 90123"
+      contact: "99999 90123",
+      wishlist: false
     },
     {
       id: 10,
@@ -135,7 +144,8 @@ const properties = [
       area: 910,
       amenities: ["Balcony", "Parking", "Garden"],
       image: "/images/flat5.jpeg",
-      contact: "99999 01234"
+      contact: "99999 01234",
+      wishlist: false
     },
     {
       id: 11,
@@ -147,8 +157,9 @@ const properties = [
       bathrooms: 3,
       area: 1400,
       amenities: ["Garden", "Elevator", "Pool"],
-      image: "/images/villa4.jpeg",
-      contact: "88888 11111"
+      image: "/images/villa9.jpeg",
+      contact: "88888 11111",
+      wishlist: false
     },
     {
       id: 12,
@@ -161,7 +172,8 @@ const properties = [
       area: 920,
       amenities: ["Balcony", "Parking", "Elevator"],
       image: "/images/flat9.jpeg",
-      contact: "88888 22222"
+      contact: "88888 22222",
+      wishlist: false
     },
     {
       id: 13,
@@ -173,8 +185,9 @@ const properties = [
       bathrooms: 1,
       area: 820,
       amenities: ["Garden", "Pool", "Parking"],
-      image: "/images/villa9.jpeg",
-      contact: "88888 33333"
+      image: "/images/villa5.jpeg",
+      contact: "88888 33333",
+      wishlist: false
     },
     {
       id: 14,
@@ -185,9 +198,10 @@ const properties = [
       bedrooms: 4,
       bathrooms: 4,
       area: 1600,
-      amenities: ["Elevator", "Balcony", "Parking"],
-      image: "/images/villa5.jpeg",
-      contact: "88888 44444"
+      amenities: ["Garden", "Balcony", "Parking"],
+      image: "/images/villa10.jpeg",
+      contact: "88888 44444",
+      wishlist: false
     },
     {
       id: 15,
@@ -200,7 +214,8 @@ const properties = [
       area: 980,
       amenities: ["Garden", "Parking", "Balcony"],
       image: "/images/flat7.jpeg",
-      contact: "88888 55555"
+      contact: "88888 55555",
+      wishlist: false
     },
     {
       id: 16,
@@ -212,8 +227,9 @@ const properties = [
       bathrooms: 2,
       area: 860,
       amenities: ["Elevator", "Pool", "Parking"],
-      image: "/images/villa10.jpeg",
-      contact: "88888 66666"
+      image: "/images/villa4.jpeg",
+      contact: "88888 66666",
+      wishlist: false
     },
     {
       id: 17,
@@ -225,8 +241,9 @@ const properties = [
       bathrooms: 2,
       area: 1020,
       amenities: ["Balcony", "Garden", "Elevator"],
-      image: "/images/flat1.jpeg",
-      contact: "88888 77777"
+      image: "/images/flat3.jpeg",
+      contact: "88888 77777",
+      wishlist: false
     },
     {
       id: 18,
@@ -238,13 +255,14 @@ const properties = [
       bathrooms: 4,
       area: 1550,
       amenities: ["Pool", "Garden", "Parking"],
-      image: "/images/villa6.jpeg",
-      contact: "88888 88888"
+      image: "/images/villa2.jpeg",
+      contact: "88888 88888",
+      wishlist: false
     },
     {
       id: 19,
       title: "Pine Crest",
-      type: "Flat",
+      type: "Apartment",
       location: "Hyderabad",
       price: 7300000,
       bedrooms: 2,
@@ -252,7 +270,8 @@ const properties = [
       area: 880,
       amenities: ["Balcony", "Elevator", "Parking"],
       image: "/images/flat6.jpeg",
-      contact: "88888 99999"
+      contact: "88888 99999",
+      wishlist: false
     },
     {
       id: 20,
@@ -264,18 +283,25 @@ const properties = [
       bathrooms: 3,
       area: 1180,
       amenities: ["Garden", "Pool", "Elevator"],
-      image: "/images/flat4.jpeg",
-      contact: "77777 00000"
+      image: "/images/flat1.jpeg",
+      contact: "77777 00000",
+      wishlist: false
     }
   ];
 
-
   
-
   
-function PropertyComponent(){
-    const [sortOption, setSortOption] = useState("");
-    const [sortedProperties, setSortedProperties] = useState(properties);
+  
+  
+  function PropertyComponent(){
+      const [sortOption, setSortOption] = useState("");
+      const [priceRange, setPriceRange] = useState([6000000, 13000000]);
+      const [selectedLocations, setSelectedLocations] = useState([]);
+      const [selectedTypes, setSelectedTypes] = useState([]);
+      const [selectedBedrooms, setSelectedBedrooms] = useState([]);
+      const [selectedAmenities, setSelectedAmenities] = useState([]);
+      const [sortedProperties, setSortedProperties] = useState(properties);
+
 
     useEffect(() => {
         let sorted = [...properties];
@@ -299,21 +325,68 @@ function PropertyComponent(){
         setSortedProperties(sorted);
     }, [sortOption, properties]);
 
+    const filteredProperties = properties
+        .filter((p) => {
+            const priceOk = p.price >= priceRange[0] && p.price <= priceRange[1];
+            const locOk = selectedLocations.length === 0 || selectedLocations.includes(p.location);
+            const typeOk = selectedTypes.length === 0 || selectedTypes.includes(p.type);
+            const bedOk = selectedBedrooms.length === 0 || selectedBedrooms.includes(`${p.bedrooms}`);
+            const amenityOk = selectedAmenities.every((a) => p.amenities.includes(a));
+
+            return priceOk && locOk && typeOk && bedOk && amenityOk;
+        })
+        .sort((a, b) => {
+            switch (sortOption) {
+            case "price-asc": return a.price - b.price;
+            case "price-desc": return b.price - a.price;
+            case "area-asc": return a.area - b.area;
+            case "area-desc": return b.area - a.area;
+            default: return 0;
+            }
+        });
+
+
+
 
     return (
         <>
             <div className="prop-page">
                 <div className="left-navbar">
-                    <Sidebar sortOption={sortOption} setSortOption={setSortOption} />
+                <Sidebar
+                    sortOption={sortOption}
+                    setSortOption={setSortOption}
+                    priceRange={priceRange}
+                    setPriceRange={setPriceRange}
+                    selectedLocations={selectedLocations}
+                    setSelectedLocations={setSelectedLocations}
+                    selectedTypes={selectedTypes}
+                    setSelectedTypes={setSelectedTypes}
+                    selectedBedrooms={selectedBedrooms}
+                    setSelectedBedrooms={setSelectedBedrooms}
+                    selectedAmenities={selectedAmenities}
+                    setSelectedAmenities={setSelectedAmenities}
+                />
+
                 </div>
 
                 <div className="property-container">
                     {
-                        sortedProperties.map(elem => (
+                        filteredProperties.map((elem,idx) => (
                             
                     <div className='property-cards' key={elem.id}>
                         <div className='prop-image'>
                             <Image src={elem.image} alt={elem.title} fill style={{ objectFit: "cover" }}/>
+                            <div className="prop-overlay">
+                                {/* <button className="favorite-btn active" onClick={onFavoriteClick(elem)}>♥</button> */}
+                                {/* {
+                                    (elem.wishlist) ? (
+                                        <button className="favorite-btn active" onClick={onFavoriteClick(idx)}>♥</button>
+                                    ) : (
+                                        <button className="favorite-btn inactive" onClick={onFavoriteClick(idx)}>♥</button>
+                                    )
+                                } */}
+
+                            </div>
                         </div>
                         <div className='prop-details'>
                             <h2>{elem.title}</h2>

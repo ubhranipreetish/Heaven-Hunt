@@ -4,7 +4,30 @@ import React, { useState } from "react";
 import "../styles/Sidebar.css";
 import PriceSlider from "./PriceSlider";
 
-export default function Sidebar({ sortOption, setSortOption }) {
+function handleCheckboxChange(value, selected, setSelected) {
+    if (selected.includes(value)) {
+      setSelected(selected.filter((v) => v !== value));
+    } else {
+      setSelected([...selected, value]);
+    }
+    console.log(selected,value)
+  }
+  
+
+  export default function Sidebar({
+    sortOption,
+    setSortOption,
+    priceRange,
+    setPriceRange,
+    selectedLocations,
+    setSelectedLocations,
+    selectedTypes,
+    setSelectedTypes,
+    selectedBedrooms,
+    setSelectedBedrooms,
+    selectedAmenities,
+    setSelectedAmenities,
+  }) {
 
   const sortLabels = {
     "": "Featured",
@@ -14,9 +37,11 @@ export default function Sidebar({ sortOption, setSortOption }) {
     "area-desc": "Area Largest to Smallest",
     "newest": "Most Recent",
   };
-  const [priceRange, setPriceRange] = useState([6000000, 10000000]);
+  const locations = ["Ahmedabad","Bangalore","Chennai","Delhi","Hyderabad","Kolkata","Mumbai","Pune"]
+  const bedroom_s = ["2","3","4"]
+  const amenitie_s = ['Garden','Pool','Balcony','Parking','Elevator']
 
-
+  
   return (
     <div className="sidebar">
         <div className="sort-section">
@@ -41,50 +66,45 @@ export default function Sidebar({ sortOption, setSortOption }) {
             <div className="location filter-tags">
                 <h4>Location:</h4>
                 <ul>
-                    <li>
-                        <input type="checkbox" id="Ahmedabad" />
-                        <label htmlFor="Ahmedabad">Ahmedabad</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="Bangalore" />
-                        <label htmlFor="Bangalore">Bangalore</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="Chennai" />
-                        <label htmlFor="Chennai">Chennai</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="Delhi" />
-                        <label htmlFor="Delhi">Delhi</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="Hyderabad" />
-                        <label htmlFor="Hyderabad">Hyderabad</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="Kolkata" />
-                        <label htmlFor="Kolkata">Kolkata</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="Mumbai" />
-                        <label htmlFor="Mumbai">Mumbai</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="Pune" />
-                        <label htmlFor="Pune">Pune</label>
-                    </li>
-                
+                    {
+                        locations.map((elem,idx) => (
+                            <li key={idx}>
+                            <input
+                                type="checkbox"
+                                id={elem}
+                                checked={selectedLocations.includes(elem)}
+                                onChange={() =>
+                                    handleCheckboxChange(elem, selectedLocations, setSelectedLocations)}
+                            />
+
+                                <label htmlFor={elem}>{elem}</label>
+                            </li>
+
+                        ))
+                    }
                 </ul>
             </div>
             <div className="prop-type filter-tags">
                 <h4>Property Type:</h4>
                 <ul>
                     <li>
-                        <input type="checkbox" id="Apartment" />
+                        <input
+                                type="checkbox"
+                                id='Apartment'
+                                checked={selectedTypes.includes('Apartment')}
+                                onChange={() =>
+                                    handleCheckboxChange('Apartment', selectedTypes, setSelectedTypes)}
+                            />
                         <label htmlFor="Apartment">Apartment</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="Villa" />
+                        <input
+                                type="checkbox"
+                                id='Villa'
+                                checked={selectedTypes.includes('Villa')}
+                                onChange={() =>
+                                    handleCheckboxChange('Villa', selectedTypes, setSelectedTypes)}
+                            />
                         <label htmlFor="Villa">Villa</label>
                     </li>
                 
@@ -93,50 +113,56 @@ export default function Sidebar({ sortOption, setSortOption }) {
             <div className="bedrooms filter-tags">
                 <h4>Bedrooms:</h4>
                 <ul>
-                    <li>
-                        <input type="checkbox" id="two" />
-                        <label htmlFor="two">2 BHK</label>
+                    {
+                        bedroom_s.map((elem,idx) => (
+                    <li key={idx}>
+                        <input
+                                type="checkbox"
+                                id={elem}
+                                checked={selectedBedrooms.includes(elem)}
+                                onChange={() =>
+                                    handleCheckboxChange(elem, selectedBedrooms, setSelectedBedrooms)
+                                }
+                            />
+                        <label htmlFor={elem}>{elem} BHK</label>
                     </li>
-                    <li>
-                        <input type="checkbox" id="three" />
-                        <label htmlFor="three">3 BHK</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="four" />
-                        <label htmlFor="four">4 BHK</label>
-                    </li>
-                
+
+                        ))
+                    }
                 </ul>
             </div>
             <div className="amenities filter-tags">
                 <h4>Amenities:</h4>
                 <ul>
-                    <li>
-                        <input type="checkbox" id="Garden" />
-                        <label htmlFor="Garden">Garden</label>
+                    {
+                        amenitie_s.map((elem,idx) => (
+                    <li key={idx}>
+                        <input
+                                type="checkbox"
+                                id={elem}
+                                checked={selectedAmenities.includes(elem)}
+                                onChange={() =>
+                                    handleCheckboxChange(elem, selectedAmenities, setSelectedAmenities)}
+                            />
+                        <label htmlFor={elem}>{elem}</label>
                     </li>
-                    <li>
-                        <input type="checkbox" id="Pool" />
-                        <label htmlFor="Pool">Pool</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="Parking" />
-                        <label htmlFor="Parking">Parking</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="Balcony" />
-                        <label htmlFor="Balcony">Balcony</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="Elevator" />
-                        <label htmlFor="Elevator">Elevator</label>
-                    </li>
-                
+
+                        ))
+                    }
                 </ul>
             </div>
             <div className="filter-action">
-                <button>Clear All</button>
-                <button>Apply Filter</button>
+                <button onClick={() => {
+                    setPriceRange([6000000, 13000000]);
+                    setSelectedLocations([]);
+                    setSelectedTypes([]);
+                    setSelectedBedrooms([]);
+                    setSelectedAmenities([]);
+                    setSortOption("");
+                }}>
+                    Clear All
+                </button>
+
             </div>
         </div>
     </div>
