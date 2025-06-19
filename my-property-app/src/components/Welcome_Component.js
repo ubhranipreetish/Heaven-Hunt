@@ -25,7 +25,7 @@ const Welcome_Component = () => {
       if (!success) setError("User already exists");
     }
 
-    if (success) router.push("/"); 
+    if (success) router.push("/home"); 
   };
 
   function changeType(){

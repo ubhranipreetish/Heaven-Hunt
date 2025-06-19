@@ -1,17 +1,21 @@
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import FeaturedProperties from "@/components/FeaturedProperties";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import Footer from "@/components/Footer";
+"use client";
+import AuthForm from "@/components/AuthForm";
+import { useAuth } from "@/context/AuthContext";
+import Welcome_Component from "@/components/Welcome_Component";
+import HomePage from "./home/page";
 
-export default function HomePage() {
+export default function RootPage() {
+  const { user } = useAuth();
+
   return (
-    <>
-      <Navbar />
-      <HeroSection />
-      <FeaturedProperties />
-      <WhyChooseUs />
-      <Footer />
-    </>
+    <div>
+      {user ? (
+        <HomePage />
+      ) : (
+        <div>
+          <Welcome_Component />
+        </div>
+      )}
+    </div>
   );
 }

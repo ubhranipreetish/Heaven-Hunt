@@ -18,7 +18,7 @@ export default function Profile_Component(){
                     </div>
                 </div>
                 ) : (
-                    <Welcome_Component />
+                    null
                 )}
             </div>
         </>

@@ -1,21 +1,19 @@
 "use client";
 import Link from "next/link";
-import { useAuth } from "@/context/AuthContext";
 import "../styles/Navbar.css";
 
 export default function Navbar() {
-  const { user, logout } = useAuth();
 
   return (
     <nav className="navbar">
-      <Link href="/" passHref>
+      <Link href="/home" passHref>
         <span className="logo">Heaven Hunt</span>
       </Link>
 
       <div className="navbar-middle"></div>
 
       <div className="nav-items">
-        <Link href="/" passHref>
+        <Link href="/home" passHref>
           <span className="home">Home</span>
         </Link>
         <Link href="/properties" passHref>
