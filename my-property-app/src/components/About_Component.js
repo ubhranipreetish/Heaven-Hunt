@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from './Navbar';
-import Image from 'next/image'
 
 import '../styles/About_Component.css';
 
@@ -19,7 +18,7 @@ const About_Component = () => {
             provide hassle-free search experiences.
           </p>
           <div className='image'>
-            <Image src='/images/house6.jpeg' alt="About Heaven Hunt"  fill style={{ objectFit: "cover" }}/>
+            <img src='/images/house6.jpeg' alt="About Heaven Hunt"/>
           </div>
         </div>
 
@@ -31,14 +30,14 @@ const About_Component = () => {
             with confidence and ease.
           </p>
           <div className='image'>
-            <Image src='/images/house7.jpeg' alt="About Heaven Hunt"  fill style={{ objectFit: "cover" }}/>
+            <img src='/images/house7.jpeg' alt="About Heaven Hunt"/>
           </div>
         </div>
       </div >
 
       <div className="specialities-section">
         <div className="image-container">
-          <Image src='/images/house8.jpeg' alt="About Heaven Hunt" fill style={{ objectFit: "cover" }}/>
+          <img src='/images/house8.jpeg' alt="About Heaven Hunt"/>
         </div>
         <div className="specialities">
           <h2>Our Specialities</h2>

@@ -1,0 +1,105 @@
+
+.signup-container {
+    display: flex;
+    /* height: 100vh; */
+  }
+  
+  .left-panel {
+    flex: 2;
+    color: white;
+    position: relative;
+    height: 100vh;
+    background-image: url('/images/flat5.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .left-panel-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  .left-panel-c2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .left-panel h2 span {
+    font-weight: bold;
+  }
+  
+  .left-panel-content h2 {
+    font-size: 4rem;
+  }
+  .left-panel-content p {
+    margin-top: 1.5rem;
+    max-width: 30rem;
+    font-size: 1.5rem;
+  }
+  
+  .right-panel {
+    flex: 1;
+    background: #1e293b;
+    height: 100vh;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .right-panel h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+    color: white;
+  }
+  
+  .signup-form input {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 10px 0;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-size: 15px;
+    color: white;
+  }
+  
+  .signup-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .signup-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .login-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: white;
+  }
+  
+  .login-text span {
+    color: #007bff;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  
