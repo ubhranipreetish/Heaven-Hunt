@@ -1,5 +1,4 @@
 "use client";
-import AuthForm from "@/components/AuthForm";
 import { useAuth } from "@/context/AuthContext";
 import Welcome_Component from "@/components/Welcome_Component";
 import HomePage from "./home/page";

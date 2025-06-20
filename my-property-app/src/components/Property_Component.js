@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import '../styles/Property_Component.css';
 import Image from 'next/image'
 import Sidebar from "./Sidebar";
+import PropertyCard from "./PropertyCard";
 
 
 const properties = [
@@ -372,52 +373,7 @@ const properties = [
                 <div className="property-container">
                     {
                         filteredProperties.map((elem,idx) => (
-                            
-                    <div className='property-cards' key={elem.id}>
-                        <div className='prop-image'>
-                            <Image src={elem.image} alt={elem.title} fill style={{ objectFit: "cover" }}/>
-                            <div className="prop-overlay">
-                                {/* <button className="favorite-btn active" onClick={onFavoriteClick(elem)}>♥</button> */}
-                                {/* {
-                                    (elem.wishlist) ? (
-                                        <button className="favorite-btn active" onClick={onFavoriteClick(idx)}>♥</button>
-                                    ) : (
-                                        <button className="favorite-btn inactive" onClick={onFavoriteClick(idx)}>♥</button>
-                                    )
-                                } */}
-
-                            </div>
-                        </div>
-                        <div className='prop-details'>
-                            <h2>{elem.title}</h2>
-                            <p><strong>{elem.bedrooms} BHK {elem.type}</strong> in {elem.location}</p>
-                            <div className='prop-specs'>
-                                <div className='prop-price'>
-                                    <h3>₹{elem.price}</h3>
-                                </div>
-                                <div className='prop-area'>
-                                    <h3>{elem.area} sqft</h3>
-                                </div>
-                            </div>
-                            <div className='prop-highlights'>
-                                {
-                                    elem.amenities.map((highlight , index) => (
-
-                                    <div className='prop-feat' key={index}>
-                                        <h3>{highlight}</h3>
-                                    </div>
-                                    ))
-                                }
-                            </div>
-                            <div className='prop-contact'>
-                                <span>Contact Number:</span>
-                                <span>{elem.contact}</span>
-                            </div>
-                            <div className='prop-view'>
-                                <button className='view-btn'>View Property</button>
-                            </div>
-                        </div>
-                    </div>
+                          <PropertyCard property={elem} key={idx}/>
                         ))
                     }
                 </div>

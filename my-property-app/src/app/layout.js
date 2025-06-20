@@ -1,5 +1,6 @@
 import { AuthProvider } from "@/context/AuthContext";
 import "./globals.css";
+import { PropProvider } from "@/context/PropertyWishlist";
 
 export const metadata = {
   title: "Heaven Hunt",
@@ -11,7 +12,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <AuthProvider>
-          {children}
+          <PropProvider>
+            {children}
+          </PropProvider>
         </AuthProvider>
       </body>
     </html>
