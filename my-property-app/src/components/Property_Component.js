@@ -373,9 +373,9 @@ const properties = [
                 <div className="property-container">
                     {
                         filteredProperties.map((elem,idx) => (
-                          <PropertyCard property={elem} key={idx}/>
-                        ))
-                    }
+                            <PropertyCard property={elem} key={idx}/>
+                          ))
+                        }
                 </div>
             </div>
         </>

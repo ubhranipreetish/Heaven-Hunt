@@ -1,28 +1,47 @@
-.prop-page {
+.profile-page {
     background-color: #1e293b;
     display: flex;
     min-height: 100vh;
 }
 
-.left-navbar {
+.profile-navbar {
     width: 25vw;
     background-color: #121926;
     margin: 2vw;
     margin-right: 1vw;
     color: #f59e0b;
     border: 2px solid #f59e0b;
-    
 
 }
 
-.property-container {
+.wishlist-property-container {
     width: 70vw;
     background-color: #1e293b;
     margin: 2vw;
     margin-left: 1vw;
     border: 2px solid #f59e0b;
     padding: 2vw;
+}
+
+.wishlist-grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    
+}
+
+.wish-text , .wishlist-empty {
+    text-align: center;
+    margin: 1vh;
+    color: #f59e0b;
+}
+
+.wish-text h2 {
+    font-size: 2.5rem;
+}
+
+.wishlist-empty p {
+    color: white;
+    font-size: 1.5rem;
+}
+.wishlist-empty h2 {
+    font-size: 2.5rem;
 }

@@ -7,6 +7,7 @@
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    height: 64vh;
   }
   
 .property-cards:hover {
