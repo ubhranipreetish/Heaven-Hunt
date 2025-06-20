@@ -171,6 +171,7 @@ function handleCheckboxChange(value, selected, setSelected) {
                     setSelectedBedrooms([]);
                     setSelectedAmenities([]);
                     setSortOption("");
+                    setSearchQuery("")
                 }}>
                     Clear All
                 </button>
