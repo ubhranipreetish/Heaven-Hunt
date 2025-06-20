@@ -39,13 +39,19 @@ export default function Profile_Component(){
             <div className="profile-page">
                 <div className="profile-navbar">
                     {user ? (
-                    <div className="profile-dropdown">
-                        <span>👤 {user.name}</span>
-                        <div className="dropdown-content">
-                            <p>Email: {user.email}</p>
-                            <button onClick={logout}>Logout</button>
+                        <div className="profile-container">
+                            <div className="profile-card">
+                            <h2>User Profile</h2>
+                            <div className="profile-info">
+                                <p><strong>Name:</strong> {user.name}</p>
+                                <p><strong>Email:</strong> {user.email}</p>
+                                <p><strong>Phone:</strong> +91 9876543210</p>
+                                <p><strong>Location:</strong> Bangalore, India</p>
+                                <p><strong>Member Since:</strong> March 2024</p>
+                            </div>
+                                <button className="logout-btn" onClick={logout}>Logout</button>
+                            </div>
                         </div>
-                    </div>
                     ) : (
                         null
                     )}

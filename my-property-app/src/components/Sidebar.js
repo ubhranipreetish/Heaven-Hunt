@@ -15,6 +15,8 @@ function handleCheckboxChange(value, selected, setSelected) {
   
 
   export default function Sidebar({
+    searchQuery,
+    setSearchQuery,
     sortOption,
     setSortOption,
     priceRange,
@@ -44,6 +46,16 @@ function handleCheckboxChange(value, selected, setSelected) {
   
   return (
     <div className="sidebar">
+        <div className="sidebar">
+            <div className="search-bar">
+                <input
+                type="text"
+                placeholder="Search by name or location..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                />
+            </div>
+        </div>
         <div className="sort-section">
             <label className="sort-label">
                 Sort by:{" "}

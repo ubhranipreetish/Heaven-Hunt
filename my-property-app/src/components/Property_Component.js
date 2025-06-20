@@ -302,6 +302,8 @@ const properties = [
       const [selectedBedrooms, setSelectedBedrooms] = useState([]);
       const [selectedAmenities, setSelectedAmenities] = useState([]);
       const [sortedProperties, setSortedProperties] = useState(properties);
+      const [searchQuery, setSearchQuery] = useState("");
+
 
 
     useEffect(() => {
@@ -328,13 +330,15 @@ const properties = [
 
     const filteredProperties = properties
         .filter((p) => {
+            const query = searchQuery.toLowerCase()
+            const searchOk = p.title.toLowerCase().includes(query) || p.location.toLowerCase().includes(query)
             const priceOk = p.price >= priceRange[0] && p.price <= priceRange[1];
             const locOk = selectedLocations.length === 0 || selectedLocations.includes(p.location);
             const typeOk = selectedTypes.length === 0 || selectedTypes.includes(p.type);
             const bedOk = selectedBedrooms.length === 0 || selectedBedrooms.includes(`${p.bedrooms}`);
             const amenityOk = selectedAmenities.every((a) => p.amenities.includes(a));
 
-            return priceOk && locOk && typeOk && bedOk && amenityOk;
+            return searchOk && priceOk && locOk && typeOk && bedOk && amenityOk;
         })
         .sort((a, b) => {
             switch (sortOption) {
@@ -354,6 +358,8 @@ const properties = [
             <div className="prop-page">
                 <div className="left-navbar">
                 <Sidebar
+                    searchQuery={searchQuery}
+                    setSearchQuery={setSearchQuery}
                     sortOption={sortOption}
                     setSortOption={setSortOption}
                     priceRange={priceRange}
@@ -370,13 +376,22 @@ const properties = [
 
                 </div>
 
-                <div className="property-container">
-                    {
-                        filteredProperties.map((elem,idx) => (
-                            <PropertyCard property={elem} key={idx}/>
-                          ))
-                        }
-                </div>
+                {filteredProperties.length > 0 ?
+                  (
+                    <div className="property-container found">
+                      {
+                          filteredProperties.map((elem,idx) => (
+                              <PropertyCard property={elem} key={idx}/>
+                            ))
+                          }
+                    </div>
+                  ) : (
+                    <div className="property-container not-found">
+                      <h2>No Properties Found</h2>
+                    </div>
+                  )
+                  
+                }
             </div>
         </>
     )

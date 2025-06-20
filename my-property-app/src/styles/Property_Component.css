@@ -22,7 +22,15 @@
     margin-left: 1vw;
     border: 2px solid #f59e0b;
     padding: 2vw;
+    
+}
+.found {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     
+}
+.not-found {
+    color: #f59e0b;
+    text-align: center;
+    font-size: 2rem;
 }
