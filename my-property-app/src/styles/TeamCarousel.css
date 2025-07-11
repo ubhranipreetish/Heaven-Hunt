@@ -1,78 +1,129 @@
 .team-carousel-section {
-    padding: 2.5rem 1.25rem;
-    background-color: #1e293b;
-    text-align: center;
-  }
+  padding: 2.5rem 1.25rem;
+  background-color: #1e293b;
+  text-align: center;
+}
   
-  .team-carousel-section h2 {
-    margin-bottom: 1.5rem;
-    color: white;
-    font-size: 2.5rem;
-  }
+.team-carousel-section h2 {
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: 2.5rem;
+}
   
-  .carousel-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    max-width: 100%;
-  }
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  max-width: 100%;
+}
   
+.carousel-container {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+  animation: scrollCarousel 40s linear infinite;
+}
+  
+.team-card {
+  flex: 0 0 auto;
+  width: 18rem;
+  height: 24rem;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+  
+.team-card-img {
+  position: relative;
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+  
+.team-card h3 {
+  margin-bottom: 8px;
+  color: #222;
+  font-size: 1.5rem;
+}
+  
+.team-card p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 1rem;
+}
+  
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+
+}
+
+.carousel-wrapper:hover .carousel-container {
+  animation-play-state: paused;
+}
+
+
+@media (max-width: 930px) {
   .carousel-container {
-    display: flex;
-    gap: 1.25rem;
-    padding: 1.25rem 0;
-    animation: scrollCarousel 40s linear infinite;
+    animation-duration: 50s;
+    gap: 1rem;
+    padding: 1rem 0;
   }
   
   .team-card {
-    flex: 0 0 auto;
-    width: 18rem;
-    height: 24rem;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s;
+    width: 14rem;
+    height: auto;
+    padding: 0.75rem;
   }
   
   .team-card-img {
-    position: relative;
-    width: 100%;
-    height: 12rem;
-    object-fit: cover;
-    border-radius: 0.5rem;
-    margin-bottom: 0.75rem;
+    height: 10rem;
   }
   
   .team-card h3 {
-    margin-bottom: 8px;
-    color: #222;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   
   .team-card p {
-    margin: 4px 0;
-    color: #555;
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+}
+  
+@media (max-width: 715px) {
+  .carousel-container {
+    animation-duration: 60s;
   }
   
-  .team-card:hover {
-    transform: scale(1.05);
+  .team-card {
+    width: 12rem;
+    padding: 0.5rem;
   }
-
-  @keyframes scrollCarousel {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+  
+  .team-card-img {
+    height: 8rem;
   }
-
-  .carousel-wrapper:hover .carousel-container {
-    animation-play-state: paused;
+  
+  .team-card h3 {
+    font-size: 1.1rem;
   }
-
+  
+  .team-card p {
+    font-size: 0.8rem;
+  }
+}
   
