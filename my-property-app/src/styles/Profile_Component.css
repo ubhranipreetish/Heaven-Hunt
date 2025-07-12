@@ -72,6 +72,7 @@
 .wishlist-grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    gap: 8px;
 }
 
 .wish-text , .wishlist-empty {
@@ -90,4 +91,95 @@
 }
 .wishlist-empty h2 {
     font-size: 2.5rem;
+}
+
+@media (max-width: 1215px) {
+    .profile-navbar {
+        width: 35vw;
+    }
+
+    .wishlist-grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 16px;
+    }
+
+}
+@media (max-width: 985px) {
+    .wishlist-grid {
+        padding: 0;
+        grid-template-columns: repeat(2,1fr);
+        gap: 16px;
+    }
+
+    .wish-text h2 {
+        font-size: 2rem;
+    }
+
+    .profile-card {
+        padding: 2rem 0.5rem;
+    }
+    .profile-card h2 {
+        font-size: 2rem;
+    }
+    
+    .profile-info p {
+        font-size: 1rem;
+    }
+    
+
+}
+@media (max-width: 835px) {
+    .profile-navbar {
+        width: 30vw;
+    }
+
+    .profile-card h2 {
+        font-size: 28px;
+    }
+
+    .profile-info p {
+        font-size: 12px;
+    }
+}
+@media (max-width: 740px) {
+    .profile-page {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .profile-navbar {
+        width: 75vw;
+    }
+
+    .profile-card h2 {
+        font-size: 2.5rem;
+    }
+    
+    .profile-info p {
+        font-size: 1rem;
+    }
+
+    .wishlist-property-container {
+        width: 95vw;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    .wishlist-grid {
+        padding: 0 1rem;
+        grid-template-columns: repeat(2,1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 585px ) {
+    .wishlist-grid {
+        padding: 1rem 10vw;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width: 400px ) {
+    .wishlist-grid {
+        padding: 1rem;
+    }
 }

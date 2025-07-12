@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 40px;
-  background-color: #1e293b;
+  background-color: #12233B;
   color: white;
   font-family: Arial, sans-serif;
   position: sticky;
@@ -11,10 +11,16 @@
   z-index: 1000;
 }
 
-.logo { 
-  font-size: 24px;
-  font-weight: bold; 
-  color: white; 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img{
+  height: 40px;
+  width: 200px; 
+
 }
 
 .nav-items {
@@ -56,7 +62,7 @@
   .navbar {
     padding: 1rem;
   }
-  
+
   .hamburger { 
     display: flex; 
   }               
@@ -92,5 +98,13 @@
 
   .hamburger.open span:nth-child(3) { 
     transform: translateY(-8.5px) rotate(-45deg); 
+  }
+}
+
+@media (max-width: 400px) {
+  .logo img{
+    height: 40px;
+    width: 120px; 
+  
   }
 }

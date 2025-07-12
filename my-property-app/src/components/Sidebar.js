@@ -102,12 +102,12 @@ function handleCheckboxChange(value, selected, setSelected) {
                     <li>
                         <input
                                 type="checkbox"
-                                id='Apartment'
-                                checked={selectedTypes.includes('Apartment')}
+                                id='Flat'
+                                checked={selectedTypes.includes('Flat')}
                                 onChange={() =>
-                                    handleCheckboxChange('Apartment', selectedTypes, setSelectedTypes)}
+                                    handleCheckboxChange('Flat', selectedTypes, setSelectedTypes)}
                             />
-                        <label htmlFor="Apartment">Apartment</label>
+                        <label htmlFor="Flat">Flat</label>
                     </li>
                     <li>
                         <input

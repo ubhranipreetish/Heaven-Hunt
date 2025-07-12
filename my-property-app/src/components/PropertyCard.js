@@ -48,7 +48,7 @@ function PropertyCard({property}) {
                     }
                 </div>
                 <div className='prop-contact'>
-                    <span>Contact Number:</span>
+                    <span>Contact No. :</span>
                     <span>{property.contact}</span>
                 </div>
                 <div className='prop-view'>

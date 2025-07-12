@@ -10,7 +10,9 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link href="/home" passHref>
-        <span className="logo">Heaven Hunt</span>
+        <div className="logo">
+          <img src="/images/HeavenHunt.png" />
+        </div>
       </Link>
 
       <button

@@ -19,7 +19,7 @@ function Wishlist() {
               <PropertyCard property={property} key={property.id}/>
             ))}
             </div>
-          </div>
+        </div>
       );
     }
   

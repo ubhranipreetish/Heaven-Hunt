@@ -11,7 +11,7 @@ const properties = [
     {
       id: 1,
       title: "Sky Heights",
-      type: "Apartment",
+      type: "Flat",
       location: "Mumbai",
       price: 8500000,
       bedrooms: 2,
@@ -39,7 +39,7 @@ const properties = [
     {
       id: 3,
       title: "Green Nest",
-      type: "Apartment",
+      type: "Flat",
       location: "Pune",
       price: 6700000,
       bedrooms: 2,
@@ -81,7 +81,7 @@ const properties = [
     {
       id: 6,
       title: "Palm Residency",
-      type: "Apartment",
+      type: "Flat",
       location: "Ahmedabad",
       price: 7900000,
       bedrooms: 3,
@@ -95,7 +95,7 @@ const properties = [
     {
       id: 7,
       title: "Metro Heights",
-      type: "Apartment",
+      type: "Flat",
       location: "Mumbai",
       price: 8700000,
       bedrooms: 2,
@@ -137,7 +137,7 @@ const properties = [
     {
       id: 10,
       title: "Lake Pearl",
-      type: "Apartment",
+      type: "Flat",
       location: "Pune",
       price: 7800000,
       bedrooms: 2,
@@ -165,7 +165,7 @@ const properties = [
     {
       id: 12,
       title: "Nova Heights",
-      type: "Apartment",
+      type: "Flat",
       location: "Bangalore",
       price: 8900000,
       bedrooms: 2,
@@ -207,7 +207,7 @@ const properties = [
     {
       id: 15,
       title: "Tranquil Rise",
-      type: "Apartment",
+      type: "Flat",
       location: "Chennai",
       price: 7600000,
       bedrooms: 3,
@@ -235,7 +235,7 @@ const properties = [
     {
       id: 17,
       title: "Ocean Crest",
-      type: "Apartment",
+      type: "Flat",
       location: "Pune",
       price: 8100000,
       bedrooms: 3,
@@ -263,7 +263,7 @@ const properties = [
     {
       id: 19,
       title: "Pine Crest",
-      type: "Apartment",
+      type: "Flat",
       location: "Hyderabad",
       price: 7300000,
       bedrooms: 2,
@@ -277,7 +277,7 @@ const properties = [
     {
       id: 20,
       title: "Serene View",
-      type: "Apartment",
+      type: "Flat",
       location: "Delhi",
       price: 9400000,
       bedrooms: 3,
