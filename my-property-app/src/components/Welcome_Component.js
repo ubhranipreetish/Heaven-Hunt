@@ -10,8 +10,18 @@ const Welcome_Component = () => {
   const [name, setName] = useState("");
   const [error, setError] = useState("");
   const [type,setType] = useState('signup')
-  const { login, signup } = useAuth();
+
   const router = useRouter();
+  const { login, signup, googleSignin } = useAuth();
+
+  const handleGoogle = async () => {
+    try {
+      await googleSignin();
+      router.push("/home");
+    } catch (err) {
+      setError(err.message);
+    }
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -55,32 +65,43 @@ const Welcome_Component = () => {
         </div>
       </div>
       <div className="right-panel">
-        <h2>{heading}</h2>
-        <form className="signup-form"  onSubmit={handleSubmit}>
-          {type === "signup" && (
+        <div className="right-panel-cnt">
+          <h2>{heading}</h2>
+          <form className="signup-form"  onSubmit={handleSubmit}>
+            {type === "signup" && (
+              <input
+                type="text"
+                placeholder="Full Name"
+                value={name}
+                onChange={e => setName(e.target.value)}
+              />
+            )}
             <input
-              type="text"
-              placeholder="Full Name"
-              value={name}
-              onChange={e => setName(e.target.value)}
+              type="email"
+              placeholder="Email Address"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
             />
-          )}
-          <input
-            type="email"
-            placeholder="Email Address"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-          />
-          {error && <p className="error">{error}</p>}
-          <button type="submit" className="signup-btn">{btn_txt}</button>
-        </form>
-        <p className="login-text">{acc_txt}<span onClick={changeType}>{span_txt}</span></p>
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+            />
+            {error && <p className="error">{error}</p>}
+            <button type="submit" className="signup-btn">{btn_txt}</button>
+          </form>
+
+          <div onClick={handleGoogle} className="google-btn">
+            <img src="/images/google-icon.png" alt="" />
+            <p>Sign in with Google</p> 
+          </div>
+
+          <p className="login-text">
+            {acc_txt}
+            <span onClick={changeType}>{span_txt}</span>
+          </p>
+        </div>
       </div>
     </div>
   );

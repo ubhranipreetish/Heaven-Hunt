@@ -1,7 +1,7 @@
 .prop-page {
-    background-color: #1e293b;
     display: flex;
-    min-height: 100vh;
+    align-items: flex-start;
+    background-color: #1e293b;
 }
 
 .left-navbar {
@@ -34,4 +34,43 @@
     color: #f59e0b;
     text-align: center;
     font-size: 2rem;
+}
+
+@media (max-width: 1215px) {
+    .found {
+        padding: 2rem;
+        grid-template-columns: repeat(2,1fr);
+        gap: 16px;
+    }
+
+}
+@media (max-width: 985px) {
+    .found{
+        grid-template-columns: repeat(2,1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 805px) {
+    .found {
+        padding: 2rem 1rem;
+    }
+}
+
+  /* ---------------- MOBILE ---------------- */
+@media (max-width: 740px) {
+    .prop-page {
+      flex-direction: column;   /* stack everything */
+    }
+  
+    /* hide sidebar from normal flow so page doesn’t widen */
+    .left-navbar {
+      display: none;            /* the slide‑in sheet is handled
+                                   INSIDE the Sidebar component */
+    }
+  
+    /* make sure property cards fill the width */
+    .property-container {
+      width: 100%;
+    }
 }

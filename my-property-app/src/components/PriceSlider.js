@@ -9,7 +9,7 @@ const STEP = 100000;
 
 export default function PriceSlider({ values, setValues }) {
   return (
-    <div className="price-range filter-tags">
+    <div className="price-range filter-tags" style={{padding:'1rem'}}>
       <h4>Budget (₹):</h4>
 
       <Range

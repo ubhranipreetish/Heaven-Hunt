@@ -33,6 +33,7 @@ function Wishlist() {
 
 export default function Profile_Component(){
     const { user, logout } = useAuth()
+    const name = user?.displayName || user?.name || "N/A";
 
     return (
         <>
@@ -43,7 +44,7 @@ export default function Profile_Component(){
                             <div className="profile-card">
                             <h2>User Profile</h2>
                             <div className="profile-info">
-                                <p><strong>Name:</strong> {user.name}</p>
+                                <p><strong>Name:</strong> {name}</p>
                                 <p><strong>Email:</strong> {user.email}</p>
                                 <p><strong>Phone:</strong> +91 9876543210</p>
                                 <p><strong>Location:</strong> Bangalore, India</p>

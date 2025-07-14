@@ -1,49 +1,45 @@
 "use client";
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import {
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+  signInWithPopup,
+} from "firebase/auth";
+import { auth, googleProvider } from "./firebase";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser]   = useState(null);
+  const [loading, setLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
-    const stored = localStorage.getItem("heaven_user");
-    if (stored) setUser(JSON.parse(stored));
+    const unsub = onAuthStateChanged(auth, (u) => {
+      setUser(u);
+      setLoading(false);
+    });
+    return unsub;
   }, []);
 
-  const login = (email, password) => {
-    const users = JSON.parse(localStorage.getItem("heaven_users")) || [];
-    const found = users.find(u => u.email === email && u.password === password);
-    if (found) {
-      setUser(found);
-      localStorage.setItem("heaven_user", JSON.stringify(found));
-      return true;
-    }
-    return false;
-  };
+  const login  = (email, pw) =>
+    signInWithEmailAndPassword(auth, email, pw);
 
-  const signup = (name, email, password) => {
-    const users = JSON.parse(localStorage.getItem("heaven_users")) || [];
-    if (users.find(u => u.email === email)) return false;
-    const newUser = { name, email, password };
-    users.push(newUser);
-    localStorage.setItem("heaven_users", JSON.stringify(users));
-    localStorage.setItem("heaven_user", JSON.stringify(newUser));
-    setUser(newUser);
-    return true;
-  };
+  const signup = (name, email, pw) =>
+    createUserWithEmailAndPassword(auth, email, pw).then(({ user }) => {
+      return user.updateProfile({ displayName: name });
+    });
 
-  const logout = () => {
-    setUser(null);
-    localStorage.removeItem("heaven_user");
-    router.push("/"); 
-  };
+  const googleSignin = () => signInWithPopup(auth, googleProvider);
+
+  const logout = () => signOut(auth).then(() => router.push("/"));
 
   return (
-    <AuthContext.Provider value={{ user, login, signup, logout }}>
-      {children}
+    <AuthContext.Provider value={{ user, loading, login, signup, googleSignin, logout }}>
+      {!loading && children}
     </AuthContext.Provider>
   );
 };

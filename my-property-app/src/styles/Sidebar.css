@@ -13,7 +13,7 @@
 }
   
 .sort-section {
-    padding: 1vw;
+    padding: 1rem;
 }
 
 .sort-section label {
@@ -23,11 +23,10 @@
 .sort-section select {
     font-size: 14px;
     display: inline;
-    padding: 8px;
 }
 
 .filter-section {
-    padding: 1vw;
+    padding: 1rem;
 }
 
 .filter-section h1 {
@@ -63,3 +62,84 @@
     background-color: #f59e0b;
     cursor: pointer;
 }
+
+.mobile-filter-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1200;
+    background: #1e293b;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    z-index: 2000;
+  }
+  
+  /* ───── backdrop when sheet is open ─────────────────────────── */
+  .filter-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1100;
+  }
+
+@media (max-width: 1050px) {
+    .search-bar input {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 850px) {
+    .search-bar input {
+        font-size: 11px;
+    }
+
+    .sort-section select {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 775px) {
+    .filter-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    .filter-tags h4 {
+        font-size: 1rem;
+    }
+}
+
+  /* ───── sidebar mobile behaviour ────────────────────────────── */
+  @media (max-width: 740px) {
+    .sidebar.mobile {             /* hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80vw;
+      max-width: 320px;
+      height: 100vh;
+      background: #fff;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 1201;              /* above backdrop */
+    }
+  
+    .sidebar.mobile-open {        /* slide‑in */
+      transform: translateX(0);
+    }
+  
+    /* optionally tighten paddings / font sizes */
+    .sort-and-price,
+    .filter-section,
+    .search-bar {
+      padding: 0 1rem;
+    }
+  }
+
+
+
