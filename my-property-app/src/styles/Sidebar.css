@@ -63,29 +63,22 @@
     cursor: pointer;
 }
 
-.mobile-filter-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1200;
-    background: #1e293b;
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-size: 16px;
+.hamburger2 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: 0;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    z-index: 2000;
-  }
+    padding: 0;
+}
   
-  /* ───── backdrop when sheet is open ─────────────────────────── */
-  .filter-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
-    z-index: 1100;
-  }
+.hamburger2 img {
+    width: 40px;
+    height: 40px;
+    background: white;
+    transition: transform 0.3s, opacity 0.3s;
+}
 
 @media (max-width: 1050px) {
     .search-bar input {
@@ -113,33 +106,68 @@
     }
 }
 
-  /* ───── sidebar mobile behaviour ────────────────────────────── */
-  @media (max-width: 740px) {
-    .sidebar.mobile {             /* hidden by default */
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 80vw;
-      max-width: 320px;
-      height: 100vh;
-      background: #fff;
-      overflow-y: auto;
-      transform: translateX(-100%);
-      transition: transform 0.3s ease;
-      z-index: 1201;              /* above backdrop */
+@media (max-width: 750px) {
+    .search-and-ham {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
     }
-  
-    .sidebar.mobile-open {        /* slide‑in */
-      transform: translateX(0);
-    }
-  
-    /* optionally tighten paddings / font sizes */
-    .sort-and-price,
-    .filter-section,
+
     .search-bar {
-      padding: 0 1rem;
+        margin: 0;
     }
-  }
+
+    .hamburger2 { 
+        display: flex; 
+    } 
+
+    
+    .sidebar {    
+        display: none;   
+        position: absolute;
+        top: 100;
+        right: 1.25rem;
+        background-color: #121926;
+        z-index: 4000;            
+        transform: translateX(100%);   
+        transition: transform 0.3s ease;  
+
+    }
+
+    .sidebar.open2 {        
+        display: flex;
+        transform: translateX(0); 
+    }
+
+    .search-bar {
+        width: 50%;
+    }
+
+    .search-bar input {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 530px) {
+    .search-bar input {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 470px) {
+    .search-bar input {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .search-bar {
+        width: 60%;
+    }
+}
+
 
 
 
